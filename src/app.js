@@ -1,5 +1,8 @@
 import express from 'express';
-import homeRoutes from './routes/homeRoutes';
+import professorsRoutes from './routes/professorsRoutes';
+import alunoRoutes from './routes/alunoRoutes';
+import sessionRoutes from './routes/sessionRoutes';
+import './database';
 
 class App {
   constructor() {
@@ -14,7 +17,9 @@ class App {
   }
 
   routes() {
-    this.server.use(homeRoutes);
+    this.server.use('/session', sessionRoutes);
+    this.server.use('/professor', professorsRoutes);
+    this.server.use('/aluno', alunoRoutes);
   }
 }
 

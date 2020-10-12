@@ -4,7 +4,7 @@ module.exports = {
   port: '5432',
   username: 'postgres',
   password: 'docker',
-  database: 'api_alunos',
+  database: 'startup',
   define: {
     timestamps: true,
     underscored: true,
